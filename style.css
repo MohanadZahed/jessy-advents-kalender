@@ -20,6 +20,7 @@ body {
     color: #7E7E7E;
     font-size: 1.4rem;
     height: 100vh;
+    overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
@@ -42,6 +43,7 @@ body {
     height: min(100vw, 950px);
     overflow: hidden;
     box-shadow: inset 17px 10px 34px #000000;
+    isolation: isolate;
 }
 
 .text-container {

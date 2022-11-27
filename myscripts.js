@@ -24,7 +24,7 @@ function correct($this) {
   setTimeout(() => {
     $this.closest("div").addClass("remove");
     if($(".remove").length === 4) {
-        new Audio("we-wish-you-a-merry-christmas.mp3").play();
+        document.getElementById("my_audio").play();
         $(".night").fadeOut();
         sky();
     }
