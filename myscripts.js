@@ -17,6 +17,9 @@ $(document).ready(function () {
       }, 2000);
     }
   });
+
+  document.body.addEventListener("click", playChillMusic);
+  
 });
 
 function correct($this) {
@@ -24,13 +27,20 @@ function correct($this) {
   setTimeout(() => {
     $this.closest("div").addClass("remove");
     if($(".remove").length === 4) {
-        document.getElementById("my_audio").play();
+      document.getElementById("chill_audio").pause();
+        document.getElementById("final_audio").play();
         $(".night").fadeOut();
         sky();
     }
       
   }, 2000);
   
+}
+
+function playChillMusic() {
+  let audio = document.getElementById("chill_audio");
+    audio.play(); 
+  document.body.removeEventListener("mousemove", playChillMusic)
 }
 
 // Snow from https://codepen.io/radum/pen/xICAB
