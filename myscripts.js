@@ -17,7 +17,7 @@ $(document).ready(function () {
       }, 2000);
     }
   });
-
+  playChillMusic();
   document.body.addEventListener("click", playChillMusic);
   
 });
@@ -39,7 +39,7 @@ function correct($this) {
 
 function playChillMusic() {
   let audio = document.getElementById("chill_audio");
-    audio.play(); 
+  audio.paused && audio.play(); 
   document.body.removeEventListener("mousemove", playChillMusic)
 }
 
