@@ -17,7 +17,7 @@ $(document).ready(function () {
       }, 2000);
     }
   });
-  playChillMusic();
+  document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
   document.body.addEventListener("click", playChillMusic);
   
 });
@@ -27,10 +27,15 @@ function correct($this) {
   setTimeout(() => {
     $this.closest("div").addClass("remove");
     if($(".remove").length === 4) {
+      $(".night").fadeOut();
       document.getElementById("chill_audio").pause();
+      setTimeout(() => {
         document.getElementById("final_audio").play();
-        $(".night").fadeOut();
         sky();
+      }, 1000);
+        
+        
+        
     }
       
   }, 2000);
@@ -39,7 +44,7 @@ function correct($this) {
 
 function playChillMusic() {
   let audio = document.getElementById("chill_audio");
-  audio.paused && audio.play(); 
+    audio.play(); 
   document.body.removeEventListener("mousemove", playChillMusic)
 }
 
