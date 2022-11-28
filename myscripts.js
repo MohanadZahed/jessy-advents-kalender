@@ -29,13 +29,10 @@ function correct($this) {
     if($(".remove").length === 4) {
       $(".night").fadeOut();
       document.getElementById("chill_audio").pause();
+      document.getElementById("final_audio").play();
       setTimeout(() => {
-        document.getElementById("final_audio").play();
         sky();
       }, 1000);
-        
-        
-        
     }
       
   }, 2000);
