@@ -29,6 +29,7 @@ function correct($this) {
     if($(".remove").length === 4) {
       $(".night").fadeOut();
       document.getElementById("chill_audio").pause();
+      $('#chill_audio').remove();
       document.getElementById("final_audio").play();
       setTimeout(() => {
         sky();

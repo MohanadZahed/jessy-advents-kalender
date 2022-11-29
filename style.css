@@ -52,7 +52,7 @@ img {
   justify-content: center;
   align-items: center;
   width: min(100vw, 950px);
-  border: 5px solid gold;
+  border: 3px solid gold;
   border-radius: 50%;
   height: min(100vw, 950px);
   overflow: hidden;
