@@ -188,9 +188,17 @@ input {
   text-align: center;
   box-shadow: inset 0 0 10px #000000;
 }
+
 .night-sky {
   position: absolute;
   z-index: -999;
+}
+
+.night-sky.fade-out .stars,
+.night-sky.fade-out .twinkleMask,
+.night-sky.fade-out .twinkleMask2 {
+  transition: all 3s;
+  opacity: 0
 }
 
 .sky {

@@ -28,6 +28,7 @@ function correct($this) {
     $this.closest("div").addClass("remove");
     if($(".remove").length === 4) {
       $(".night").fadeOut();
+      $('.night-sky').addClass('fade-out');
       document.getElementById("chill_audio").pause();
       $('#chill_audio').remove();
       document.getElementById("final_audio").play();
